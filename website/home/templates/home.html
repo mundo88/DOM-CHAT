@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block body %}
+<main class="bg-gray-100 w-full h-screen flex flex-col">
+    {% include 'component/nav.html'%}
+    <div class="flex flex-1 h-[calc(100%_-_60px)]">
+      {% include 'component/sidebar.html'   %}
+      <div class="flex-1">
+        {% include 'component/chatview.html'   %}
+      </div>
+    </div>
+</main>
+{% endblock %}

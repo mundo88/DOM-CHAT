@@ -1,0 +1,160 @@
+<!-- component -->
+<div class="p:2 justify-between flex bg-white h-full max-h-full flex-col">
+    <div class="flex sm:items-center justify-between p-3 border-b border-gray-200">
+       <div class="relative flex items-center space-x-2">
+          <div class="relative">
+             <span class="absolute text-green-500 right-0 bottom-0">
+                <svg width="12" height="12">
+                   <circle cx="6" cy="6" r="6" fill="currentColor"></circle>
+                </svg>
+             </span>
+          <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&h=764&q=100" alt="" class="w-10 sm:w-10 h-10 sm:h-10 rounded-full">
+          </div>
+          <div class="flex flex-col leading-tight">
+             <div class="text-md font-semibold flex items-center">
+                <span class="text-gray-700 mr-3">Jane Doe</span>
+             </div>
+             <span class="text-sm text-gray-600">Junior Developer</span>
+          </div>
+       </div>
+       <div class="flex items-center space-x-2">
+          <button type="button" class="inline-flex items-center justify-center rounded-full border h-10 w-10 transition duration-500 ease-in-out text-gray-500 hover:bg-gray-200 focus:outline-none">
+             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+             </svg>
+          </button>
+          <button type="button" class="inline-flex items-center justify-center rounded-full border h-10 w-10 transition duration-500 ease-in-out text-gray-500 hover:bg-gray-200 focus:outline-none">
+             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+             </svg>
+          </button>
+          <button type="button" class="inline-flex items-center justify-center rounded-full border h-10 w-10 transition duration-500 ease-in-out text-gray-500 hover:bg-gray-200 focus:outline-none">
+             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+             </svg>
+          </button>
+       </div>
+    </div>
+    <div id="messages" class="flex flex-1 max-h-full flex-col space-y-4 p-4 overflow-y-auto scrollbar-thumb-green scrollbar-thumb-rounded scrollbar-track-green-lighter scrollbar-w-2 scrolling-touch">
+        {% for item in range(10) %}
+       <div class="chat-message">
+          <div class="flex items-end justify-end">
+             <div class="flex flex-col space-y-2 text-base max-w-xs mx-2 order-1 items-end">
+                <div><span class="px-4 py-2 rounded-xl inline-block bg-green-600 text-white ">Are you using sudo?</span></div>
+                <div><span class="px-4 py-2 rounded-xl inline-block rounded-br-none bg-green-600 text-white ">Run this command sudo chown -R `whoami` /Users/{{your_user_profile}}/.npm-global/ then install the package globally without using sudo</span></div>
+             </div>
+             <img src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="My profile" class="w-6 h-6 rounded-full order-2">
+          </div>
+       </div>
+       <div class="chat-message">
+          <div class="flex items-end">
+             <div class="flex flex-col space-y-2 text-base max-w-xs mx-2 order-2 items-start">
+                <div><span class="px-4 py-2 rounded-xl inline-block bg-gray-200 text-gray-600">It seems like you are from Mac OS world. There is no /Users/ folder on linux ?</span></div>
+                <div><span class="px-4 py-2 rounded-xl inline-block rounded-bl-none bg-gray-200 text-gray-600">I have no issue with any other packages installed with root permission globally.</span></div>
+             </div>
+             <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&h=764&q=100" alt="My profile" class="w-6 h-6 rounded-full order-1">
+          </div>
+       </div>
+       <div class="chat-message">
+          <div class="flex items-end justify-end">
+             <div class="flex flex-col space-y-2 text-base max-w-xs mx-2 order-1 items-end">
+                <div><span class="px-4 py-2 rounded-xl inline-block rounded-br-none bg-green-600 text-white ">yes, I have a mac. I never had issues with root permission as well, but this helped me to solve the problem</span></div>
+             </div>
+             <img src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="My profile" class="w-6 h-6 rounded-full order-2">
+          </div>
+       </div>
+        <div class="chat-message">
+            <div class="flex items-end">
+            <div class="flex flex-col space-y-2 text-base max-w-xs mx-2 order-2 items-start">
+                <div><span class="px-4 py-2 rounded-xl inline-block bg-gray-200 text-gray-600">I get the same error on Arch Linux (also with sudo)</span></div>
+                <div><span class="px-4 py-2 rounded-xl inline-block bg-gray-200 text-gray-600">I also have this issue, Here is what I was doing until now: #1076</span></div>
+                <div><span class="px-4 py-2 rounded-xl inline-block rounded-bl-none bg-gray-200 text-gray-600">even i am facing</span></div>
+            </div>
+            <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&h=764&q=100" alt="My profile" class="w-6 h-6 rounded-full order-1">
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+    <div class="border-t border-gray-200 p-3 sm:mb-0 ">
+        <div class="flex flex-col">
+            <div class="flex items-center w-16 pb-3 space-x-4  bg-white dark:bg-gray-900 dark:border-gray-700">
+                <a href="#" class="p-1.5 text-gray-500 focus:outline-nones transition-colors duration-150 rounded-lg dark:text-gray-400 dark:hover:bg-gray-800 hover:bg-gray-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"></path>
+                    </svg>
+                </a>
+        
+                <a href="#" class="p-1.5 text-green-500 transition-colors duration-150 bg-green-100 rounded-lg dark:text-blue-400 dark:bg-gray-800">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"></path>
+                    </svg>
+                </a>
+        
+                <a href="#" class="p-1.5 text-gray-500 focus:outline-nones transition-colors duration-150 rounded-lg dark:text-gray-400 dark:hover:bg-gray-800 hover:bg-gray-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z"></path>
+                    </svg>
+                </a>
+        
+                <a href="#" class="p-1.5 text-gray-500 focus:outline-nones transition-colors duration-150 rounded-lg dark:text-gray-400 dark:hover:bg-gray-800 hover:bg-gray-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"></path>
+                    </svg>
+                </a>
+        
+                <a href="#" class="p-1.5 text-gray-500 focus:outline-nones transition-colors duration-150 rounded-lg dark:text-gray-400 dark:hover:bg-gray-800 hover:bg-gray-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="flex space-x-2">
+                <div class="relative w-full ">
+                    <input type="text" placeholder="Nhập nội dung tin nhắn ( gõ / để hiện câu trả lời nhanh )" class="w-full focus:outline-none focus:placeholder-gray-400 text-gray-700 font-medium placeholder-gray-600 pl-5 pr-32 bg-gray-100 rounded-full py-3">
+                    <div class="absolute right-0 items-center inset-y-0 hidden sm:flex pr-1">
+                       <button type="button" class="inline-flex items-center justify-center rounded-full h-10 w-10 transition duration-500 ease-in-out text-gray-500 hover:bg-gray-200 focus:outline-none">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6 text-gray-600">
+                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                          </svg>
+                       </button>
+                    </div>
+                 </div>
+                 <button type="button" class="flex items-center justify-center rounded-full p-3 w-12 transition duration-150 ease-in-out text-white bg-green-600 hover:bg-green-700 focus:outline-none">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-6 w-6 ml-1 transform rotate-90">
+                     <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path>
+                  </svg>
+               </button>
+            </div>
+        </div>
+
+    </div>
+ </div>
+ 
+ <style>
+ .scrollbar-w-2::-webkit-scrollbar {
+   width: 0.4rem;
+   height: 0.25rem;
+ }
+ 
+ .scrollbar-track-green-lighter::-webkit-scrollbar-track {
+   --bg-opacity: 1;
+   background-color: #f7fafc;
+   background-color: rgba(247, 250, 252, var(--bg-opacity));
+ }
+ 
+ .scrollbar-thumb-green::-webkit-scrollbar-thumb {
+   background-color: #c7c7c7;
+ }
+ 
+ .scrollbar-thumb-rounded::-webkit-scrollbar-thumb {
+   border-radius: 1rem;
+ }
+ </style>
+ 
+ <script>
+     const el = document.getElementById('messages')
+     el.scrollTop = el.scrollHeight
+ </script>

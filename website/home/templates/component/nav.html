@@ -1,4 +1,4 @@
-<nav class="flex items-center justify-between w-full border border-white/80 bg-white bg-opacity-80 py-2 px-8 text-white shadow-md backdrop-blur-2xl backdrop-saturate-200 l">
+<nav class="flex items-center justify-between w-full border border-white/80 bg-white bg-opacity-80 py-2 px-4 text-white shadow-md backdrop-blur-2xl backdrop-saturate-200 l">
     <div class="flex space-x-8">
         <a href="#"class="cursor-pointer flex items-center">
             <img src="{{ url_for('static',filename='images/logo/logo.png' ) }}"
@@ -25,7 +25,7 @@
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0,0,256,256"><g transform="scale(5.12,5.12)"><path d="M10,4c-3.309,0 -6,2.691 -6,6c0,3.309 2.691,6 6,6c3.309,0 6,-2.691 6,-6c0,-3.309 -2.691,-6 -6,-6zM25,4c-3.309,0 -6,2.691 -6,6c0,3.309 2.691,6 6,6c3.309,0 6,-2.691 6,-6c0,-3.309 -2.691,-6 -6,-6zM40,4c-3.309,0 -6,2.691 -6,6c0,3.309 2.691,6 6,6c3.309,0 6,-2.691 6,-6c0,-3.309 -2.691,-6 -6,-6zM10,19c-3.309,0 -6,2.691 -6,6c0,3.309 2.691,6 6,6c3.309,0 6,-2.691 6,-6c0,-3.309 -2.691,-6 -6,-6zM25,19c-3.309,0 -6,2.691 -6,6c0,3.309 2.691,6 6,6c3.309,0 6,-2.691 6,-6c0,-3.309 -2.691,-6 -6,-6zM40,19c-3.309,0 -6,2.691 -6,6c0,3.309 2.691,6 6,6c3.309,0 6,-2.691 6,-6c0,-3.309 -2.691,-6 -6,-6zM10,34c-3.309,0 -6,2.691 -6,6c0,3.309 2.691,6 6,6c3.309,0 6,-2.691 6,-6c0,-3.309 -2.691,-6 -6,-6zM25,34c-3.309,0 -6,2.691 -6,6c0,3.309 2.691,6 6,6c3.309,0 6,-2.691 6,-6c0,-3.309 -2.691,-6 -6,-6zM40,34c-3.309,0 -6,2.691 -6,6c0,3.309 2.691,6 6,6c3.309,0 6,-2.691 6,-6c0,-3.309 -2.691,-6 -6,-6z"></path></g></svg>
         </button>
         <a class="relative w-10 h-10 overflow-hidden bg-gray-200 rounded-full dark:bg-gray-600">
-            <img src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="" class="w-full h-full object-contain">
+            <img src="{{ current_user.photo_picture }}" alt="" class="w-full h-full object-contain">
         </a>
     </div>
 </nav>

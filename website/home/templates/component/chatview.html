@@ -2,7 +2,7 @@
 
 <div class="flex h-full max-h-full">
    <div class="p:2 w-full justify-between flex bg-white flex-col ">
-      <div class="flex sm:items-center justify-between px-3 py-6 border-b border-gray-200">
+      <div class="flex sm:items-center justify-between px-4 py-6 border-b border-gray-200">
          <div class="relative flex items-center space-x-2">
             <div class="relative">
                <span class="absolute text-green-500 right-0 bottom-0">
@@ -40,7 +40,7 @@
                   <div><span class="px-4 py-2 rounded-xl inline-block bg-green-600 text-white ">Are you using sudo?</span></div>
                   <div><span class="px-4 py-2 rounded-xl inline-block rounded-br-none bg-green-600 text-white ">Run this command sudo chown -R `whoami` /Users/{{your_user_profile}}/.npm-global/ then install the package globally without using sudo</span></div>
                </div>
-               <img src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="My profile" class="w-6 h-6 rounded-full order-2">
+               <img src="{{ current_user.photo_picture }}" alt="My profile" class="w-6 h-6 rounded-full order-2">
             </div>
          </div>
          <div class="chat-message">
@@ -57,7 +57,7 @@
                <div class="flex flex-col space-y-2 text-base max-w-xs mx-2 order-1 items-end">
                   <div><span class="px-4 py-2 rounded-xl inline-block rounded-br-none bg-green-600 text-white ">yes, I have a mac. I never had issues with root permission as well, but this helped me to solve the problem</span></div>
                </div>
-               <img src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="My profile" class="w-6 h-6 rounded-full order-2">
+               <img src="{{ current_user.photo_picture }}" alt="My profile" class="w-6 h-6 rounded-full order-2">
             </div>
          </div>
          <div class="chat-message">

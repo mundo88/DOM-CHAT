@@ -61,14 +61,45 @@
             </div>
          </div>
          <div class="chat-message">
-               <div class="flex items-end">
+            <div class="flex items-end">
                <div class="flex flex-col space-y-2 text-base max-w-xs mx-2 order-2 items-start">
                   <div><span class="px-4 py-2 rounded-xl inline-block bg-gray-200 text-gray-600">I get the same error on Arch Linux (also with sudo)</span></div>
                   <div><span class="px-4 py-2 rounded-xl inline-block bg-gray-200 text-gray-600">I also have this issue, Here is what I was doing until now: #1076</span></div>
                   <div><span class="px-4 py-2 rounded-xl inline-block rounded-bl-none bg-gray-200 text-gray-600">even i am facing</span></div>
+                  <div class="attachment border border-gray-200 aspect-square w-44 h-44 overflow-hidden rounded-lg">
+                     <img src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/341769176_621364286537279_3113908295358356792_n.jpg?stp=cp6_dst-jpg&_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=yVieF_BK_F0AX-JI6Is&_nc_ht=scontent.fhan14-2.fna&oh=00_AfAtfaKbRYfLcZ2QYBx60ZGEuAiTdFoMDsxCq0ImRi68mQ&oe=6446A7D4" alt="" class="w-full h-full object-cover">
+                  </div>
                </div>
                <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&h=764&q=100" alt="My profile" class="w-6 h-6 rounded-full order-1">
+            </div>
+         </div>
+         <div class="chat-message">
+            <div class="flex items-end justify-end">
+               <div class="flex flex-col space-y-2 text-base max-w-xs mx-2 order-1 items-end">
+                  <span class="px-4 py-2 rounded-xl inline-block rounded-br-none bg-green-600 text-white ">
+                     Are you using sudo?
+                  </span>
+                  <div >
+                     <div class="flex items-center justify-between p-4 rounded-xl rounded-br-none bg-green-100 space-x-14 text-white ">
+                        <div class="flex space-x-3">
+                           <div class="bg-gradient-to-r from-green-500 to-green-600  px-4 py-6 rounded-lg text-white flex items-center justify-center font-semibold">
+                              PSD
+                           </div>
+                           <div class="flex flex-col space-y-1 justify-center">
+                              <span class="text-green-600 font-medium">Thiet-ke-moi.psd</span>
+                              <span class="text-green-600 text-sm">
+                                 435.82kb
+                              </span>
+                           </div>
+                        </div> 
+                        <button type="button" class="rounded-lg bg-white text-green-600 hover:bg-green-600 duration-150 focus:ring-4 focus:ring-green-300 hover:text-white w-8 h-8 flex items-center justify-center">
+                           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor" stroke-width="0"  stroke="currentColor" class="w-6 h-6" viewBox="0,0,256,256"><g transform="scale(10.66667,10.66667)"><path d="M11,2c-0.552,0 -1,0.448 -1,1v8h-3.5c-0.27614,0 -0.5,0.22386 -0.5,0.5c0.00002,0.1326 0.05271,0.25976 0.14648,0.35352c0.00999,0.01021 0.02042,0.01998 0.03125,0.0293l5.10547,4.81445l0.0332,0.03125c0.1851,0.17405 0.42951,0.27112 0.68359,0.27148c0.25408,-0.00036 0.49849,-0.09743 0.68359,-0.27148l0.01367,-0.01172c0.00328,-0.00388 0.00654,-0.00779 0.00976,-0.01172l5.10352,-4.8125c0.01013,-0.00872 0.0199,-0.01784 0.0293,-0.02734l0.00781,-0.00586c0.00197,-0.00194 0.00392,-0.00389 0.00586,-0.00586c0.09377,-0.09375 0.14646,-0.22092 0.14648,-0.35352c0,-0.27614 -0.22386,-0.5 -0.5,-0.5h-3.5v-8c0,-0.552 -0.448,-1 -1,-1h-1zM3,20c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h18c0.36064,0.0051 0.69608,-0.18438 0.87789,-0.49587c0.18181,-0.3115 0.18181,-0.69676 0,-1.00825c-0.18181,-0.3115 -0.51725,-0.50097 -0.87789,-0.49587z"></path></g></svg>
+                        </button>
+                     </div>
+                  </div>
                </div>
+               <img src="{{ current_user.photo_picture }}" alt="My profile" class="w-6 h-6 rounded-full order-2">
+            </div>
          </div>
          {% endfor %}
       </div>

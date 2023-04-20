@@ -1,6 +1,6 @@
 <!-- component -->
 
-<div class="flex h-full max-h-full">
+<div class="flex h-full max-h-full transition-all duration-150"  x-data="{ sidebarOpen: true }">
    <div class="p:2 w-full justify-between flex bg-white flex-col ">
       <div class="flex sm:items-center justify-between px-4 py-6 border-b border-gray-200">
          <div class="relative flex items-center space-x-2">
@@ -25,7 +25,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                </svg>
             </button>
-            <button type="button" class="inline-flex items-center justify-center rounded-full bg-gray-200 h-10 w-10 transition duration-150 ease-in-out text-gray-700 hover:bg-gray-300 focus:outline-none">
+            <button @click="sidebarOpen = !sidebarOpen" type="button" class="inline-flex items-center justify-center rounded-full bg-gray-200 h-10 w-10 transition duration-150 ease-in-out text-gray-700 hover:bg-gray-300 focus:outline-none">
                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0,0,256,256" stroke="currentColor" class="h-6 w-6">
                   <g transform="scale(0.05905,0.05905)"><path d="M587,1652c264,0 478,214 478,478c0,264 -214,478 -478,478c-264,0 -478,-214 -478,-478c0,-264 214,-478 478,-478zM2175,1652c264,0 478,214 478,478c0,264 -214,478 -478,478c-264,0 -478,-214 -478,-478c0,-264 214,-478 478,-478zM3763,1652c264,0 478,214 478,478c0,264 -214,478 -478,478c-264,0 -478,-214 -478,-478c0,-264 214,-478 478,-478z"></path></g>
                </svg>
@@ -74,7 +74,9 @@
       </div>
       {% include 'component/chatinput.html'   %}
    </div>
-   {% include 'component/chatdetailpanel.html'   %}
+   <div class="w-80"  :class="{ 'hidden': !sidebarOpen }">
+      {% include 'component/chatdetailpanel.html'   %}
+   </div>
 </div>
 <style>
  .scrollbar-w-2::-webkit-scrollbar {

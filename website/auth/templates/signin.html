@@ -10,12 +10,10 @@
       >
         <img
           src="{{ url_for('static',filename='images/logo/logo.png' ) }}"
-          class="mr-4 h-10"
+          class="h-10"
           alt="Dom Chat Logo"
         />
-        <span class="self-center text-2xl font-bold whitespace-nowrap"
-          >Dom Chat</span
-        >
+        <span class="font-sans font-bold text-2xl mb-1 bg-gradient-to-r from-green-700 via-green-600 to-green-500 text-transparent bg-clip-text">om Chat</span>
       </a>
       <div
         class="p-10 w-full max-w-lg bg-white rounded-2xl shadow-sm shadow-gray-300"
@@ -26,7 +24,7 @@
           </h2>
           <div class="grid grid-cols-3 gap-3 mt-6">
             <a
-              href="#"
+              href='{{url_for("auth.facebookLogin")}}'
               class="inline-flex justify-center w-full px-5 py-2.5 text-sm font-medium text-[#4267B2] border border-gray-200 rounded-lg shadow-sm hover:bg-gray-50"
             >
               <svg
@@ -97,7 +95,7 @@
                 type="email"
                 name="email"
                 id="email"
-                class="border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-fuchsia-50 focus:border-fuchsia-300 block w-full p-2.5"
+                class="border border-gray-300 outline-none text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-green-50 focus:border-green-300 block w-full p-2.5"
                 placeholder="name@company.com"
                 required=""
               />
@@ -113,7 +111,7 @@
                 name="password"
                 id="password"
                 placeholder="••••••••"
-                class="border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-fuchsia-50 focus:border-fuchsia-300 block w-full p-2.5"
+                class="border border-gray-300 outline-none text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-green-50 focus:border-green-300 block w-full p-2.5"
                 required=""
               />
             </div>
@@ -125,7 +123,7 @@
                   name="remember"
                   type="checkbox"
                   class="w-5 h-5 rounded border-gray-300 focus:outline-none focus:ring-0 checked:bg-dark-900"
-                  required=""
+          
                 />
               </div>
               <div class="ml-3 text-sm">

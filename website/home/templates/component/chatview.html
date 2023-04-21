@@ -124,7 +124,7 @@
       </div>
       {% include 'component/chatinput.html'   %}
    </div>
-   <div class="w-80"  :class="{ 'hidden': !sidebarOpen }">
+   <div class="w-80 duration-150 visible opacity-100"  :class="{ '-mr-80 opacity-0 invisible': !sidebarOpen }">
       {% include 'component/chatdetailpanel.html'   %}
    </div>
 </div>

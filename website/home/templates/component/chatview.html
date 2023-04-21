@@ -32,7 +32,7 @@
             </button>
          </div>
       </div>
-      <div id="messages" class="flex flex-1  flex-col space-y-4 p-4 overflow-y-auto scrollbar-thumb-green scrollbar-thumb-rounded scrollbar-track-green-lighter scrollbar-w-2 scrolling-touch">
+      <div id="messages" class="flex flex-1  flex-col space-y-4 px-4 py-12 overflow-y-auto scrollbar-thumb-green scrollbar-thumb-rounded scrollbar-track-green-lighter scrollbar-w-2 scrolling-touch">
          {% for item in range(10) %}
          <div class="chat-message">
             <div class="flex items-end justify-end">
@@ -92,13 +92,32 @@
                               </span>
                            </div>
                         </div> 
-                        <button type="button" class="rounded-lg bg-white text-green-600 hover:bg-green-600 duration-150 focus:ring-4 focus:ring-green-300 hover:text-white w-8 h-8 flex items-center justify-center">
+                        <button type="button" class="rounded-lg bg-white text-green-600 hover:bg-green-600 duration-150 focus:ring-2 focus:ring-green-300 hover:text-white w-8 h-8 flex items-center justify-center">
                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor" stroke-width="0"  stroke="currentColor" class="w-6 h-6" viewBox="0,0,256,256"><g transform="scale(10.66667,10.66667)"><path d="M11,2c-0.552,0 -1,0.448 -1,1v8h-3.5c-0.27614,0 -0.5,0.22386 -0.5,0.5c0.00002,0.1326 0.05271,0.25976 0.14648,0.35352c0.00999,0.01021 0.02042,0.01998 0.03125,0.0293l5.10547,4.81445l0.0332,0.03125c0.1851,0.17405 0.42951,0.27112 0.68359,0.27148c0.25408,-0.00036 0.49849,-0.09743 0.68359,-0.27148l0.01367,-0.01172c0.00328,-0.00388 0.00654,-0.00779 0.00976,-0.01172l5.10352,-4.8125c0.01013,-0.00872 0.0199,-0.01784 0.0293,-0.02734l0.00781,-0.00586c0.00197,-0.00194 0.00392,-0.00389 0.00586,-0.00586c0.09377,-0.09375 0.14646,-0.22092 0.14648,-0.35352c0,-0.27614 -0.22386,-0.5 -0.5,-0.5h-3.5v-8c0,-0.552 -0.448,-1 -1,-1h-1zM3,20c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h18c0.36064,0.0051 0.69608,-0.18438 0.87789,-0.49587c0.18181,-0.3115 0.18181,-0.69676 0,-1.00825c-0.18181,-0.3115 -0.51725,-0.50097 -0.87789,-0.49587z"></path></g></svg>
                         </button>
                      </div>
                   </div>
                </div>
                <img src="{{ current_user.photo_picture }}" alt="My profile" class="w-6 h-6 rounded-full order-2">
+            </div>
+         </div>
+         <div class="chat-message">
+            <div class="flex items-end">
+               <div class="flex flex-col space-y-2 text-base max-w-xs mx-2 order-2 items-start">
+                  <div><span class="px-4 py-2 rounded-xl inline-block bg-gray-200 text-gray-600">Audio template message test</span></div>
+                  <div class="relative overflow-hidden p-2 rounded-xl bg-gray-200 text-gray-600  w-48 ">
+                     <span class="absolute w-3/5 bg-gray-300 inset-0"></span>
+                     <div class="relative z-10 flex items-center justify-between">
+                        <button type="button" class="rounded-lg bg-white duration-150 focus:ring-2 ring-gray-500 hover:bg-gray-500 hover:text-white w-8 h-8 flex items-center justify-center">
+                           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor" stroke-width="0" stroke="currentColor" class="w-4 h-4" viewBox="0,0,256,256"><g transform="scale(5.33333,5.33333)"><path d="M11.39648,4.11133c-2.29228,0.09069 -4.39648,1.96085 -4.39648,4.48047v30.81641c0,3.35949 3.74276,5.56369 6.68164,3.93555l27.80859,-15.4082c3.02344,-1.67529 3.02344,-6.19581 0,-7.87109l-27.80859,-15.4082c-0.73472,-0.40704 -1.52106,-0.57515 -2.28516,-0.54492z"></path></g></svg>
+                        </button>
+                        <span class="rounded-lg font-medium p-2 bg-white duration-150 focus:ring-2 ring-gray-300 text-sm h-8 flex items-center justify-center">
+                           0:02
+                        </span>
+                     </div>
+                  </div>
+               </div>
+               <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&h=764&q=100" alt="My profile" class="w-6 h-6 rounded-full order-1">
             </div>
          </div>
          {% endfor %}

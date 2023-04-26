@@ -1,4 +1,4 @@
-from flask import Blueprint,render_template
+from flask import Blueprint,redirect
 from flask_login import login_required,current_user
 
 home =  Blueprint('home', __name__,    
@@ -10,4 +10,4 @@ home =  Blueprint('home', __name__,
 @login_required
 def homeView():
     print(current_user)
-    return render_template('home.html')
+    return redirect("/dashboard")

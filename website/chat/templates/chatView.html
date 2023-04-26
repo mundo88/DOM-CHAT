@@ -1,0 +1,12 @@
+{% extends 'home.html' %}
+
+{% block homeView %}
+    <div class="flex w-full">
+      {% block sidebar %}
+        {% include 'component/chatsidebar.html'   %} 
+      {% endblock %}
+      <div class="flex-1">
+        {% include 'component/chatcontent.html'   %}
+      </div>
+    </div>
+{% endblock %}

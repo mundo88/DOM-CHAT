@@ -1,8 +1,28 @@
 <!-- component -->
 
-<div class="flex h-full max-h-full transition-all duration-150"  x-data="{ sidebarOpen: true }">
+<div class="flex h-full max-h-full transition-all duration-150" x-data="{ sidebarChatDetail: true }">
    <div class="p:2 w-full justify-between flex bg-white flex-col ">
-      <div class="flex sm:items-center justify-between px-4 py-6 border-b border-gray-200">
+      <header class=" relative flex sm:items-center justify-between px-4 py-6 border-b border-gray-200" x-data="{ chatSearch: false }">
+         <div class="absolute top-full w-full flex  px-4 py-3 opacity-1 space-x-1 items-center left-0 bg-white border-b border-gray-200 mt-[1px] z-20 "  style="display: none;" x-show="chatSearch" 
+         x-transition:enter="transition ease-out duration-50"
+         x-transition:enter-start=" opacity-0" 
+         x-transition:enter-end=" opacity-1"
+         x-transition:leave="transition ease-in duration-50"
+         x-transition:leave-start=" opacity-1" 
+         x-transition:leave-end=" opacity-0" >
+         <div class="relative flex-1">
+                  <div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
+                     <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+                  </div>
+                  <input type="text" id="search-guest" class="bg-gray-100 text-gray-900 text-sm outline-none rounded-full focus:ring-green-500 focus:ring-1 block w-full pr-4 pl-10 py-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 " placeholder="Tìm kiếm tin nhắn..." required="">
+         </div>
+         <button class="h-8 px-2 space-x-2 text-sm text-gray-500 transition-colors hover:bg-gray-200 flex items-center font-medium duration-150  rounded-lg dark:bg-gray-800">
+               <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor" stroke-width="0" stroke="none" class="w-4 h-3" viewBox="0,0,256,256"><g transform="scale(10.66667,10.66667)"><path d="M22.777,4.983c-0.334,-0.606 -0.986,-0.983 -1.703,-0.983h-18.148c-0.717,0 -1.369,0.377 -1.703,0.983c-0.318,0.578 -0.296,1.257 0.058,1.815l9.074,14.315c0.351,0.556 0.966,0.887 1.645,0.887c0.679,0 1.294,-0.331 1.646,-0.886l9.074,-14.315c0.353,-0.559 0.375,-1.238 0.057,-1.816z"></path></g></svg>
+         </button>
+         <button class="rotate-180 h-8 px-2 space-x-2 text-sm text-gray-500 transition-colors hover:bg-gray-200 flex items-center font-medium duration-150  rounded-lg dark:bg-gray-800">
+               <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor" stroke-width="0" stroke="none" class="w-4 h-3" viewBox="0,0,256,256"><g transform="scale(10.66667,10.66667)"><path d="M22.777,4.983c-0.334,-0.606 -0.986,-0.983 -1.703,-0.983h-18.148c-0.717,0 -1.369,0.377 -1.703,0.983c-0.318,0.578 -0.296,1.257 0.058,1.815l9.074,14.315c0.351,0.556 0.966,0.887 1.645,0.887c0.679,0 1.294,-0.331 1.646,-0.886l9.074,-14.315c0.353,-0.559 0.375,-1.238 0.057,-1.816z"></path></g></svg>
+         </button>
+         </div>
          <div class="relative flex items-center space-x-2">
             <div class="relative">
                <span class="absolute text-green-500 right-0 bottom-0">
@@ -20,18 +40,18 @@
             </div>
          </div>
          <div class="flex items-center space-x-2">
-            <button type="button" class="inline-flex items-center justify-center rounded-full  h-10 w-10 transition duration-150 ease-in-out text-gray-700 bg-gray-200 hover:bg-gray-300 focus:outline-none">
+            <button type="button" @click="chatSearch = !chatSearch" type="button" class="inline-flex items-center justify-center rounded-full  h-10 w-10 transition duration-150 ease-in-out text-gray-700 bg-gray-200 hover:bg-gray-300 focus:outline-none">
                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                </svg>
             </button>
-            <button @click="sidebarOpen = !sidebarOpen" type="button" class="inline-flex items-center justify-center rounded-full bg-gray-200 h-10 w-10 transition duration-150 ease-in-out text-gray-700 hover:bg-gray-300 focus:outline-none">
+            <button @click="sidebarChatDetail = !sidebarChatDetail" type="button" class="inline-flex items-center justify-center rounded-full bg-gray-200 h-10 w-10 transition duration-150 ease-in-out text-gray-700 hover:bg-gray-300 focus:outline-none">
                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0,0,256,256" stroke="currentColor" class="h-6 w-6">
                   <g transform="scale(0.05905,0.05905)"><path d="M587,1652c264,0 478,214 478,478c0,264 -214,478 -478,478c-264,0 -478,-214 -478,-478c0,-264 214,-478 478,-478zM2175,1652c264,0 478,214 478,478c0,264 -214,478 -478,478c-264,0 -478,-214 -478,-478c0,-264 214,-478 478,-478zM3763,1652c264,0 478,214 478,478c0,264 -214,478 -478,478c-264,0 -478,-214 -478,-478c0,-264 214,-478 478,-478z"></path></g>
                </svg>
             </button>
          </div>
-      </div>
+      </header>
       <div id="messages" class="flex flex-1  flex-col space-y-4 px-4 py-12 overflow-y-auto scrollbar-thumb-green scrollbar-thumb-rounded scrollbar-track-green-lighter scrollbar-w-2 scrolling-touch">
          {% for item in range(10) %}
          <div class="chat-message">
@@ -67,7 +87,7 @@
                   <div><span class="px-4 py-2 rounded-xl inline-block bg-gray-200 text-gray-600">I also have this issue, Here is what I was doing until now: #1076</span></div>
                   <div><span class="px-4 py-2 rounded-xl inline-block rounded-bl-none bg-gray-200 text-gray-600">even i am facing</span></div>
                   <div class="attachment border border-gray-200 aspect-square w-44 h-44 overflow-hidden rounded-lg">
-                     <img src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/341769176_621364286537279_3113908295358356792_n.jpg?stp=cp6_dst-jpg&_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=yVieF_BK_F0AX-JI6Is&_nc_ht=scontent.fhan14-2.fna&oh=00_AfAtfaKbRYfLcZ2QYBx60ZGEuAiTdFoMDsxCq0ImRi68mQ&oe=6446A7D4" alt="" class="w-full h-full object-cover">
+                     <img src="https://cache.giaohangtietkiem.vn/d/14707a16f6e652e78789207c104e41b5.jpg" alt="" class="w-full h-full object-cover">
                   </div>
                </div>
                <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&h=764&q=100" alt="My profile" class="w-6 h-6 rounded-full order-1">
@@ -124,32 +144,11 @@
       </div>
       {% include 'component/chatinput.html'   %}
    </div>
-   <div class="w-80 duration-150 visible opacity-100"  :class="{ '-mr-80 opacity-0 invisible': !sidebarOpen }">
+   <div  class="w-80 duration-150 visible opacity-100"  :class="{ '-mr-80 opacity-0 invisible': !sidebarChatDetail }">
       {% include 'component/chatdetailpanel.html'   %}
    </div>
 </div>
-<style>
- .scrollbar-w-2::-webkit-scrollbar {
-   width: 0.4rem;
-   height: 0.25rem;
- }
- 
- .scrollbar-track-green-lighter::-webkit-scrollbar-track {
-   --bg-opacity: 1;
-   background-color: #ffffff;
- }
- 
- .scrollbar-thumb-green::-webkit-scrollbar-thumb {
-   background-color: #e7e7e7;
- }
- .scrollbar-thumb-green::-webkit-scrollbar-thumb:hover {
-   background-color: #d8d8d8;
- }
- 
- .scrollbar-thumb-rounded::-webkit-scrollbar-thumb {
-   border-radius: 1rem;
- }
-</style>
+
  
 <script>
      const el = document.getElementById('messages')

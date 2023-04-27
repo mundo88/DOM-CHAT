@@ -1,9 +1,9 @@
-<div class="border-t border-gray-200 pt-3 pb-4 px-4 sm:mb-0 ">
+<div class="border-t border-gray-200 pt-3 pb-4 px-4 sm:mb-0 " x-data="{ modalImgList: false }">
     <div class="flex flex-col">
           <div class="flex items-center w-16 pb-3 space-x-4  bg-white dark:bg-gray-900 dark:border-gray-700">
-             <a href="#" class="p-1.5 text-gray-500 focus:outline-nones transition-colors duration-150 rounded-lg dark:text-gray-400 dark:hover:bg-gray-800 hover:bg-gray-100">
+             <button @click="modalImgList =!modalImgList" class="p-1.5 text-gray-500 focus:outline-nones transition-colors duration-150 rounded-lg dark:text-gray-400 dark:hover:bg-gray-800 hover:bg-gray-100">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" viewBox="0,0,256,256"><g transform="scale(2,2)"><path d="M14,13c-7.2,0 -13,5.8 -13,13v78c0,7.2 5.8,13 13,13h100c7.2,0 13,-5.8 13,-13v-16.40039c0,-1.7 -1.3,-3 -3,-3c-1.7,0 -3,1.3 -3,3v16.40039c0,3.9 -3.1,7 -7,7h-76c11.4,-35.4 40.90039,-49.4 85.40039,-40.5c0.2,0 0.39961,0.09961 0.59961,0.09961c1.7,0 3,-1.3 3,-3v-41.59961c0,-7.2 -5.8,-13 -13,-13zM14,19h100c3.9,0 7,3.1 7,7v37.90039c-46.1,-8.1 -77.59922,8.49961 -89.19922,47.09961h-17.80078c-3.9,0 -7,-3.1 -7,-7v-78c0,-3.9 3.1,-7 7,-7zM36,31c-4.5,0 -8.8,1.8 -12,5c-6.6,6.6 -6.6,17.39961 0,24.09961c3.2,3.2 7.5,5 12,5c4.5,0 8.8,-1.8 12,-5c6.6,-6.6 6.6,-17.39961 0,-24.09961c-3.2,-3.2 -7.5,-5 -12,-5zM36,37c3,0 5.70078,1.09922 7.80078,3.19922c4.3,4.3 4.3,11.30156 0,15.60156c-2.1,2.1 -4.90078,3.19922 -7.80078,3.19922c-2.9,0 -5.70078,-1.09922 -7.80078,-3.19922c-4.3,-4.3 -4.3,-11.30156 0,-15.60156c2.1,-2.1 4.80078,-3.19922 7.80078,-3.19922z"></path></g></svg>
-             </a>
+             </button>
              <a href="#" class="p-1.5 text-gray-500 focus:outline-nones transition-colors duration-150 rounded-lg dark:text-gray-400 dark:hover:bg-gray-800 hover:bg-gray-100">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" viewBox="0,0,256,256"><g transform="scale(5.12,5.12)"><path d="M39,6c-1.78906,0 -3.57812,0.67188 -4.9375,2.03125l-19.84375,19.875c-0.07031,0.05469 -0.13281,0.11719 -0.1875,0.1875c-0.02344,0.01953 -0.04297,0.03906 -0.0625,0.0625c-0.04687,0.03906 -0.08594,0.07813 -0.125,0.125c0,0.01172 0,0.01953 0,0.03125c-1.73828,1.95313 -1.68359,4.97266 0.1875,6.84375c1.94141,1.94141 5.12109,1.94141 7.0625,0l15.09375,-15.125c0.29688,-0.28516 0.38672,-0.72656 0.22656,-1.10547c-0.15625,-0.37891 -0.53516,-0.62109 -0.94531,-0.61328c-0.26172,0.01172 -0.50781,0.12109 -0.6875,0.3125l-15.09375,15.09375c-1.17578,1.17578 -3.07422,1.17578 -4.25,0c-1.13672,-1.13672 -1.15625,-2.91406 -0.09375,-4.09375c0.03516,-0.03906 0.06641,-0.08203 0.09375,-0.125c0.02344,-0.01953 0.04297,-0.03906 0.0625,-0.0625l0.09375,-0.0625c0,-0.01172 0,-0.01953 0,-0.03125l19.90625,-19.875c1.95313,-1.95312 5.07422,-1.95703 7.03125,0c1.95313,1.95313 1.95313,5.07813 0,7.03125l-24.625,24.625c-2.73437,2.73438 -7.14062,2.73438 -9.875,0c-2.73437,-2.73437 -2.73437,-7.14062 0,-9.875l19.6875,-19.6875c0.29688,-0.24219 0.43359,-0.62891 0.34766,-1.00391c-0.08594,-0.37109 -0.37891,-0.66406 -0.75,-0.75c-0.375,-0.08594 -0.76172,0.05078 -1.00391,0.34766l-19.6875,19.6875c-3.49609,3.49609 -3.5,9.22266 0,12.71875c3.5,3.49609 9.19141,3.49609 12.6875,0l24.65625,-24.625c2.71875,-2.71875 2.71875,-7.1875 0,-9.90625c-1.35937,-1.35937 -3.17969,-2.03125 -4.96875,-2.03125z"></path></g></svg>
              </a>
@@ -39,11 +39,13 @@
                    </button>
                 </div>
              </div>
-             <button type="button" class="flex items-center justify-center aspect-square w-10 rounded-full  transition duration-150 ease-in-out text-white bg-green-600 hover:bg-green-700 focus:outline-none">
+             <button type="button" class="flex items-center justify-center aspect-square w-10 h-10 rounded-full transition duration-150 ease-in-out text-white bg-green-600 hover:bg-green-700 focus:outline-none">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-6 w-6 ml-1 transform rotate-90">
                    <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path>
                 </svg>
              </button>
           </div>
     </div>
+    {% include '/component/modal/imagelist.html' %}
+
  </div>

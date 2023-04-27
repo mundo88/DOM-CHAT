@@ -36,9 +36,11 @@ def create_bluePrint(app):
     from .dashboard.views import dashboard
     from .chat.views import chat
     from .products.views import products
+    from .notify.views import notify
     app.register_blueprint(home)
     app.register_blueprint(dashboard)
     app.register_blueprint(products,url_prefix='/products')
+    app.register_blueprint(notify,url_prefix='/notify')
     app.register_blueprint(chat,url_prefix='/chat')
     app.register_blueprint(auth,url_prefix='/authentication')
 

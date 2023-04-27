@@ -1,0 +1,127 @@
+{% extends 'home.html' %}
+{% block title %} - Thông báo{% endblock %}
+{% block homeView %}
+    <div class="flex w-full flex-col bg-white ">
+      <nav class="border-b">
+        <div class="pt-6 pb-3 flex flex-col bg-white border-r w-full dark:bg-gray-900 dark:border-gray-700">
+          <div class="px-6">
+            <ol class="inline-flex items-center space-x-1">
+              <li aria-current="page"> <div class="flex items-center">   <span class=" text-sm font-medium text-gray-500 dark:text-gray-400">Pages</span> </div>
+              </li>
+              <li aria-current="page"> <div class="flex items-center space-x-1">   <span>/</span>   <span class="text-sm font-medium text-gray-500 dark:text-gray-400">Notification</span></div>
+              </li>
+            </ol>
+            <div class="flex justify-between w-full mt-6">
+              <div class="flex items-center space-x-4">
+                <button class="flex items-center text-white w-6 h-6 rounded-md border-2 border-gray-300 hover:border-green-700 justify-center">
+                  <svg viewBox="0 0 16 16" class="w-4 h-4" fill="currentColor"><path d="M5.7 7.3a1 1 0 00-1.4 1.4l2 2a1 1 0 001.4 0l4-4a1 1 0 00-1.4-1.4L7 8.58l-1.3-1.3z" style="height: 100%;"></path></svg>
+                </button>
+                <span class="h-full w-[1px] bg-gray-200"></span>
+                <button class="flex items-center text-gray-700 rounded-md hover:bg-gray-100 p-2 w-10 h-10 justify-center">
+                  <svg viewBox="0 0 256 256" class="w-8 h-8" fill="currentColor"><g transform="scale(10.66667,10.66667)"><path d="M10,2l-1,1h-4c-0.552,0 -1,0.448 -1,1c0,0.552 0.448,1 1,1h14c0.552,0 1,-0.448 1,-1c0,-0.552 -0.448,-1 -1,-1h-4l-1,-1zM5,7v13c0,1.1 0.9,2 2,2h10c1.1,0 2,-0.9 2,-2v-13zM9.41016,10.41406c0.25525,0 0.51058,0.09652 0.70508,0.29102l1.88477,1.88477l1.88477,-1.88477c0.389,-0.389 1.02116,-0.389 1.41016,0c0.389,0.389 0.389,1.02116 0,1.41016l-1.88477,1.88477l1.88477,1.88477c0.389,0.389 0.389,1.02116 0,1.41016c-0.389,0.389 -1.02116,0.389 -1.41016,0l-1.88477,-1.88477l-1.88477,1.88477c-0.389,0.389 -1.02116,0.389 -1.41016,0c-0.389,-0.389 -0.389,-1.02116 0,-1.41016l1.88477,-1.88477l-1.88477,-1.88477c-0.389,-0.389 -0.389,-1.02116 0,-1.41016c0.1945,-0.1945 0.44983,-0.29102 0.70508,-0.29102z"></path></g></svg>
+                </button>
+                <button class="flex items-center text-gray-700 rounded-md hover:bg-gray-100 p-2 w-10 h-10 justify-center">
+                  <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg"><path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z"></path><path fill-rule="evenodd" d="M3 8h14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V8zm5 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                </button>
+                <button class="flex items-center text-gray-700 rounded-md hover:bg-gray-100 p-2 w-10 h-10 justify-center">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                </button>
+                <button class="flex items-center text-gray-700 rounded-md hover:bg-gray-100 p-2 w-10 h-10 justify-center">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path></svg>
+                </button>
+                <span class="h-full w-[1px] bg-gray-200"></span>
+                <button type="button" class="inline-flex items-center justify-center h-10 rounded-md text-sm font-semibold bg-green-600 py-1.5 px-3 transition duration-150 ease-in-out text-white hover:bg-green-700 focus:outline-none">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256" stroke="currentColor" class="h-6 w-6">
+                      <g transform="scale(4,4)"><path d="M32,12c-1.104,0 -2,0.896 -2,2v16h-16c-1.104,0 -2,0.896 -2,2c0,1.104 0.896,2 2,2h16v16c0,1.104 0.896,2 2,2c1.104,0 2,-0.896 2,-2v-16h16c1.104,0 2,-0.896 2,-2c0,-1.104 -0.896,-2 -2,-2h-16v-16c0,-1.104 -0.896,-2 -2,-2z"></path></g>
+                  </svg>
+                  <span>Tạo thông báo</span>
+               </button>
+
+              </div>
+              <div class="flex items-center space-x-4">
+                <button class="flex items-center text-gray-700 rounded-md hover:bg-gray-100 p-2 w-10 h-10 justify-center">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+                </button>
+                <span class="h-full w-[1px] bg-gray-200"></span>
+                <button class="flex items-center text-gray-700 rounded-md hover:bg-gray-100 p-2 w-10 h-10 justify-center">
+    
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                </button>
+                <button class="flex items-center text-gray-700 rounded-md hover:bg-gray-100 p-2 w-10 h-10 justify-center">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                </button>
+                <div class="font-medium text-gray-700">
+                  Show <strong>1-25</strong> of <strong>2290</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="flex flex-col space-y-1 px-2 overflow-y-auto scrollbar-thumb-green scrollbar-thumb-rounded scrollbar-track-green-lighter scrollbar-w-2 scrolling-touch h-full mt-4 ">
+        {% for item in range(3) %}
+          <a href="#" class="flex px-4 py-3 relative rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+            <div class="flex-shrink-0">
+              <img class="rounded-full w-11 h-11" src="https://flowbite.com/docs/images/people/profile-picture-1.jpg" alt="Jese image">
+              <div class="absolute flex items-center justify-center w-5 h-5 ml-6 -mt-4 bg-blue-600 rounded-full">
+                <svg class="w-3 h-3 text-white" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l2-2a1 1 0 00-1.414-1.414L11 7.586V3a1 1 0 10-2 0v4.586l-.293-.293z"></path><path d="M3 5a2 2 0 012-2h1a1 1 0 010 2H5v7h2l1 2h4l1-2h2V5h-1a1 1 0 110-2h1a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"></path></svg>
+              </div>
+            </div>
+            <div class="w-full pl-3">
+                <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400">New message from <span class="font-semibold text-gray-900 dark:text-white">Jese Leos</span>: "Hey, what's up? All set for the presentation?"</div>
+                <div class="text-xs text-blue-600 dark:text-blue-500">a few moments ago</div>
+            </div>
+          </a>
+          <a href="#" class="flex px-4 py-3 relative rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+            <div class="flex-shrink-0">
+              <img class="rounded-full w-11 h-11" src="https://flowbite.com/docs/images/people/profile-picture-2.jpg" alt="Joseph image">
+              <div class="absolute flex items-center justify-center w-5 h-5 ml-6 -mt-4 bg-gray-900 rounded-full">
+                <svg class="w-3 h-3 text-white" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z"></path></svg>
+              </div>
+            </div>
+            <div class="w-full pl-3">
+                <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400"><span class="font-semibold text-gray-900 dark:text-white">Joseph Mcfall</span> and <span class="font-medium text-gray-900 dark:text-white">5 others</span> started following you.</div>
+                <div class="text-xs text-blue-600 dark:text-blue-500">10 minutes ago</div>
+            </div>
+          </a>
+          <a href="#" class="flex px-4 py-3 relative rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+            <div class="flex-shrink-0">
+              <img class="rounded-full w-11 h-11" src="https://flowbite.com/docs/images/people/profile-picture-3.jpg" alt="Bonnie image">
+              <div class="absolute flex items-center justify-center w-5 h-5 ml-6 -mt-4 bg-red-600 rounded-full">
+                <svg class="w-3 h-3 text-white" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path></svg>
+              </div>
+            </div>
+            <div class="w-full pl-3">
+                <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400"><span class="font-semibold text-gray-900 dark:text-white">Bonnie Green</span> and <span class="font-medium text-gray-900 dark:text-white">141 others</span> love your story. See it and view more stories.</div>
+                <div class="text-xs text-blue-600 dark:text-blue-500">44 minutes ago</div>
+            </div>
+          </a>
+          <a href="#" class="flex px-4 py-3 relative rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+            <div class="flex-shrink-0">
+              <img class="rounded-full w-11 h-11" src="https://flowbite.com/docs/images/people/profile-picture-4.jpg" alt="Leslie image">
+              <div class="absolute flex items-center justify-center w-5 h-5 ml-6 -mt-4 bg-green-400 rounded-full">
+                <svg class="w-3 h-3 text-white" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+              </div>
+            </div>
+            <div class="w-full pl-3">
+                <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400"><span class="font-semibold text-gray-900 dark:text-white">Leslie Livingston</span> mentioned you in a comment: <span class="font-medium text-blue-500" href="#">@bonnie.green</span> what do you say?</div>
+                <div class="text-xs text-blue-600 dark:text-blue-500">1 hour ago</div>
+            </div>
+          </a>
+          <a href="#" class="flex px-4 py-3 relative rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+            <div class="flex-shrink-0">
+              <img class="rounded-full w-11 h-11" src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="Robert image">
+              <div class="absolute flex items-center justify-center w-5 h-5 ml-6 -mt-4 bg-purple-500 rounded-full">
+                <svg class="w-3 h-3 text-white" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path></svg>
+              </div>
+            </div>
+            <div class="w-full pl-3">
+                <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400"><span class="font-semibold text-gray-900 dark:text-white">Robert Brown</span> posted a new video: Glassmorphism - learn how to implement the new design trend.</div>
+                <div class="text-xs text-blue-600 dark:text-blue-500">3 hours ago</div>
+            </div>
+          </a>
+        {% endfor %}
+
+      </div>
+    </div>
+{% endblock %}
